@@ -1,20 +1,19 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
-    <tab id="krishaweb" translate="label" sortOrder="10">
-    	<label>Out Of Stock Last</label>
-    </tab>
-    <section id="outofstocklast" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-        <label>outofstocklast</label>
-        <tab>krishaweb</tab>
-        <resource>Krishaweb_OutOfStockLast::krishaweb</resource>
-        <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>General</label>
-            <field id="enabled" type="select" translate="label,comment,tooltip" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Enabled</label>
-                <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                <config_path>inviqa/general/enabled</config_path>
-                <comment>Helpful message about using this field.</comment>
-                <tooltip>Longer helpful message about using this field.</tooltip>
-            </field>
-        </group>
-    </section>
+    <system>
+        <tab id="krishaweb" translate="label" sortOrder="100">
+            <label>Krishaweb</label>
+        </tab>
+        <section id="outofstocklast" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Out Of Stock Last</label>
+            <tab>krishaweb</tab>
+            <resource>Krishaweb_OutOfStockLast::config_outofstocklast</resource>
+            <group id="general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Out Of Stock Product at Last</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
 </config>
