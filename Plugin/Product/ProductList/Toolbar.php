@@ -1,8 +1,5 @@
 <?php
-/**
- * @author Rakesh Jesadiya
- * @package Rbj_OutOfStock
- */
+
 
 namespace Krishaweb\OutOfStockLast\Plugin\Product\ProductList;
 
@@ -11,12 +8,7 @@ class Toolbar
     
      protected $_scopeConfig;
 
-    /**
-     * @param \Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection $subject
-     * @param bool $printQuery
-     * @param bool $logQuery
-     * @return array
-     */
+    
     public function __construct(\Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig) {
         $this->_scopeConfig = $scopeConfig;
     }
